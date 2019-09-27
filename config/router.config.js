@@ -1,7 +1,7 @@
 export default [
   {
     path: '/',
-    component: '../layout',
+    component: '../layout/BasicLayout',
     routes: [
       {
         path: 'helloworld',

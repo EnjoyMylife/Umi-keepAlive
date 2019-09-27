@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import { Route, Redirect, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch, Link } from 'react-router-dom';
 import { Provider, KeepAlive } from "react-keep-alive";
 
-// import HelloWorld from '@/pages/HelloWorld'
-class Test extends React.Component {
-  state = {
-    number: 0
-  };
+import Test from '@/pages/HelloWorld'
+// class Test extends React.Component {
+//   state = {
+//     number: 0
+//   };
 
-  handleClick = () => {
-    this.setState(({ number }) => ({
-      number: number + 1
-    }));
-  };
+//   handleClick = () => {
+//     this.setState(({ number }) => ({
+//       number: number + 1
+//     }));
+//   };
 
-  render() {
-    return (
-      <div>
-        <button onClick={this.handleClick}>
-          Click the button to increase the number
-        </button>
-        <div>Number: {this.state.number}</div>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.handleClick}>
+//           Click the button to increase the number
+//         </button>
+//         <div>Number: {this.state.number}</div>
+//       </div>
+//     );
+//   }
+// }
 
 export default class CRouter extends Component {
   constructor(props) {
