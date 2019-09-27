@@ -1,4 +1,4 @@
-export default class HelloWorld extends React.Component {
+export default class NumberAddTwo extends React.Component {
   state = {
     number: 0
   };
