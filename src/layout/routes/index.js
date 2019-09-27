@@ -16,6 +16,7 @@ export default class CRouter extends Component {
   render() {
     return(
       <div>
+        '每次更新后 one点击添加-》two点击添加-》点击change-》点击one-》点击two会报错'
         <ul>
           <li>
             <Link to="/one">one</Link>
@@ -23,13 +24,15 @@ export default class CRouter extends Component {
           <li>
             <Link to="/two">two</Link>
           </li>
-          <li onClick={() => this.setState({include: "one"})}>change</li>
+          <li>
+            <div style={{cursor: 'pointer'}} onClick={() => this.setState({include: "one"})}>change</div>
+          </li>
         </ul>
         <Provider include={this.state.include} exclude={this.state.exclude || ''}>
           <Switch>
             <Route
               path="/one"
-              // Component={One}
+              Component={One}
               render={props => (
                 <KeepAlive name="one">
                   <One {...props} />
@@ -38,7 +41,7 @@ export default class CRouter extends Component {
             />
             <Route
               path="/two"
-              // Component={Two}
+              Component={Two}
               render={props => (
                 <KeepAlive name="two">
                   <Two {...props} />
