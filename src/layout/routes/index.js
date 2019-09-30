@@ -28,7 +28,7 @@ export default class CRouter extends Component {
             <div style={{cursor: 'pointer'}} onClick={() => this.setState({include: "one"})}>change</div>
           </li>
         </ul>
-        <Provider include={this.state.include} exclude={this.state.exclude || ''}>
+        <Provider include={this.state.include}>
           <Switch>
             <Route
               path="/one"
