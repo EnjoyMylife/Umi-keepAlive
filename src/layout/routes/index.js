@@ -16,7 +16,7 @@ export default class CRouter extends Component {
   render() {
     return(
       <div>
-        '每次更新后 one点击添加-》two点击添加-》点击change-》点击one-》点击two会报错'
+        '每次更新后 one点击添加-》two点击添加-》点击change-》切换one点击添加-》切换two会报错'
         <ul>
           <li>
             <Link to="/one">one</Link>
